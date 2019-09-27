@@ -1,0 +1,31 @@
+.container-fluid {
+    margin: 100px auto 100px auto;
+}
+
+#searchDiv {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+#searchBar{
+    border-radius: 25px;
+    border: 1px solid #dfe1e5;
+    height: 40px;
+    margin-top: 0px;
+}
+
+#errorDiv {
+    margin-top: 3px;
+    border-radius: 25px;
+}
+
+#submitBtn {
+    display: block;
+    margin: 10px auto 20px auto;
+    border-radius: 5px;
+}
