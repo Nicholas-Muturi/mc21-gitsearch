@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
     this.userInput = "";
   }
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit() {
   }
