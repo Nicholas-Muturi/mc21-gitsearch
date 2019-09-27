@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <form (ngSubmit)='searchUser()' #searchForm='ngForm'>
     <div class="row">
-      <div class="col-md-3"></div>
-      <div id="searchDiv" class="col-md-6">
+      <div class="col-md-4"></div>
+
+      <div id="searchDiv" class="col-md-4">
         <h1>Git search</h1>
         <div class="form-group">
           <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control" #searchBar = 'ngModel' required>
@@ -12,7 +13,8 @@
         </div>
         <button id="submitBtn" class="btn btn-outline-primary">Search User</button>
       </div>
-      <div class="col-md-3"></div>
+      
+      <div class="col-md-4"></div>
     </div>
   </form>
   <p *ngIf="user">{{user.userProfileURL}}</p>
