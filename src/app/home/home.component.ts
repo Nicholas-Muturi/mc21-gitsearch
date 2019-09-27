@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  
+  userInput: string;
+
+  searchUser(){
+    console.log(this.userInput);
+    this.userInput = "";
+  }
 
   constructor() { }
 
