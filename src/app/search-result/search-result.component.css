@@ -20,3 +20,7 @@ h4, h6, p {
     margin-right: auto;
     border: 1px solid rgba(187, 186, 186, 0.3)
 }
+
+fa-icon {
+    margin-right: 5px;
+}

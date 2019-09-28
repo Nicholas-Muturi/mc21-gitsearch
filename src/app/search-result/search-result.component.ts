@@ -3,6 +3,8 @@ import { User } from '../user';
 import { Repo } from '../repo';
 import { ActivatedRoute } from '@angular/router';
 import { GitUserService } from '../user-service/git-user.service';
+import { faMapMarkerAlt, faEnvelope, faCalendarCheck, faEnvelopeOpen, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-search-result',
@@ -12,6 +14,12 @@ import { GitUserService } from '../user-service/git-user.service';
 export class SearchResultComponent implements OnInit {
   user: User;
   repo: Repo;
+
+  faMapMarkerAlt = faMapMarkerAlt;
+  faEnvelope = faEnvelope;
+  faCalendarCheck = faCalendarCheck;
+  faEnvelopeOpen = faEnvelopeOpen;
+  faUserFriends = faUserFriends;
 
   constructor(private route: ActivatedRoute, private userService: GitUserService) { }
 

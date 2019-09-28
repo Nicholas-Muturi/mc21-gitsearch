@@ -3,7 +3,7 @@
   <div class="card">
     <div class="row">
       <div class="col-md-4">
-        <img id="avatar" class="img-thumbnail" src="../../assets/img/avatar.jpeg" alt="avatar">
+        <img id="avatar" class="img-thumbnail" src="{{user.userAvatar}}" alt="avatar">
 
       </div>
       <div id="info_section" class="col-md-8">
@@ -21,43 +21,43 @@
         <div class="row">
           <div class="col-md-4">
             <div *ngIf='user.userLocation;else noLocation'>
-              <h6 class="titles">Location</h6>
+              <h6 class="titles"><fa-icon [icon]="faMapMarkerAlt"></fa-icon>Location</h6>
               <p>{{user.userLocation}}</p>
             </div>
             <ng-template #noLocation>
-              <h6 class="titles">Location</h6>
+              <h6 class="titles"><fa-icon [icon]="faMapMarkerAlt"></fa-icon>Location</h6>
               <p>No location found</p>
             </ng-template>
           </div>
 
           <div class="col-md-4">
             <div *ngIf='user.userEmail;else noEmail'>
-              <h6 class="titles">Email</h6>
+              <h6 class="titles"><fa-icon [icon]="faEnvelope"></fa-icon>Email</h6>
               <p>{{user.userEmail}}</p>
             </div>
             <ng-template #noEmail>
-              <h6 class="titles">Email</h6>
+              <h6 class="titles"><fa-icon [icon]="faEnvelope"></fa-icon>Email</h6>
               <p>Email is hidden</p>
             </ng-template>
           </div>
 
           <div class="col-md-4">
-            <h6 class="titles">Joined</h6>
+            <h6 class="titles"><fa-icon [icon]="faCalendarCheck"></fa-icon>Joined</h6>
             <p>{{user.userCreationDate|date}}</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-4">
-            <h6 class="titles">Repositories</h6>
+            <h6 class="titles"><fa-icon [icon]="faEnvelopeOpen"></fa-icon>Repositories</h6>
             <p>{{user.userRepoCount}}</p>
           </div>
           <div class="col-md-4">
-            <h6 class="titles">Followers</h6>
+            <h6 class="titles"><fa-icon [icon]="faUserFriends"></fa-icon>Followers</h6>
             <p>{{user.userFollowers}}</p>
           </div>
           <div class="col-md-4">
-            <h6 class="titles">Following</h6>
+            <h6 class="titles"><fa-icon [icon]="faUserFriends"></fa-icon>Following</h6>
             <p>{{user.userFollowing}}</p>
           </div>
         </div>
