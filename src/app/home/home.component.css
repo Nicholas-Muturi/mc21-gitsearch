@@ -6,6 +6,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px 30px 20px 30px;
 }
 
 h1 {
@@ -24,16 +25,19 @@ h1 {
 }
 .wrapper #searchIcon { 
   position: absolute;
-  top: 1.5px;
+  top: 6px;
   left: 8px;
-  max-width: 40px;
+  max-width: 30px;
 }
 
 #searchBar{
     border-radius: 25px;
     border: 1px solid #dfe1e5;
     height: 42px;
-    margin-top: 20px;
+}
+
+#searchBar:hover, #searchBar:focus {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 #errorDiv {

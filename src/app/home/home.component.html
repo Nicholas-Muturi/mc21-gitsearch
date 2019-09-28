@@ -1,13 +1,15 @@
 <div class="container-fluid">
   <form (ngSubmit)='searchUser()' #searchForm='ngForm'>
     <div class="row">
+      <div class="col-md-4"></div>
 
-      <div id="searchDiv">
-        <h1>Git search</h1>
+      <div id="searchDiv" class="col-md-4">
+        <h1 class="text-center">Git search</h1>
         <div class="form-group">
           <div class="wrapper">
             <img id='searchIcon' src="../../assets/img/search.png" alt="Search">
-            <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control" #searchBar = 'ngModel' required>
+            <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
+              #searchBar='ngModel' required>
           </div>
           <!-- <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty); else validInput' class="alert alert-danger">
               <div *ngIf="searchBar.errors.required">Please insert a name</div>
@@ -15,8 +17,8 @@
         </div>
         <button id="submitBtn" class="btn btn-outline-primary">Search User</button>
       </div>
-      
-      
+
+      <div class="col-md-4"></div>
     </div>
   </form>
   <p *ngIf="user">{{user.userProfileURL}}</p>
