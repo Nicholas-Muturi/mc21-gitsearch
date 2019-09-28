@@ -1,10 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appErrorHighlight]'
 })
 export class ErrorHighlightDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) { 
+    this.elem.nativeElement.style.fontStyle='italic';
+    this.elem.nativeElement.style.color='#7DB3C6';
+
+  }
 
 }
