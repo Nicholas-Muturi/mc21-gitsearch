@@ -14,6 +14,7 @@ export class User {
     userCreationDate: string;
 
     constructor(){
+        this.userID=0;
         this.userLoginName="";
         this.userName="";
         this.userProfileURL="";

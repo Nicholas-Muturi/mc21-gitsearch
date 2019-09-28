@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Repo } from '../repo';
+import { ActivatedRoute } from '@angular/router';
+import { GitUserService } from '../user-service/git-user.service';
 
 @Component({
   selector: 'app-search-result',
@@ -10,11 +12,41 @@ import { Repo } from '../repo';
 export class SearchResultComponent implements OnInit {
   user: User;
   repo: Repo;
+
+  // replaceNull(){
+  //   if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+  //   else if(){
+
+  //   }
+
+  // }
   
-  constructor() { }
+  constructor(private route: ActivatedRoute, private userService: GitUserService) { }
 
   ngOnInit() {
-    
+    let id = this.route.snapshot.paramMap.get('id');
+    this.user = this.userService.getUser(id);
+    this.replaceNull();
   }
 
 }

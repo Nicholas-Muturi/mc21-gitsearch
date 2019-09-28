@@ -22,7 +22,7 @@ export class GitUserService {
       login: string;
       name: string;
       html_url: string;
-      avatars_url: string
+      avatar_url: string
       email: string;
       bio: string;
       public_repos: number;
@@ -39,7 +39,7 @@ export class GitUserService {
         this.user.userLoginName = response.login;
         this.user.userName = response.name;
         this.user.userProfileURL = response.html_url;
-        this.user.userAvatar = response.avatars_url;
+        this.user.userAvatar = response.avatar_url;
         this.user.userEmail = response.email;
         this.user.userBio = response.bio;
         this.user.userRepoCount = response.public_repos;
@@ -58,8 +58,11 @@ export class GitUserService {
     return userPromise;
   }
 
-  getUser(){
-    return this.user.userID;
+  getUser(id){
+    if(id == this.user.userID){
+      return this.user;
+    }
+    
   }
 
   constructor(private http: HttpClient) {

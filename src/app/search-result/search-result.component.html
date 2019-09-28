@@ -1,3 +1,4 @@
+<ng-progress [color]="'red'"></ng-progress>
 <div id="userSection">
   <div class="card">
     <div class="row">
@@ -8,7 +9,8 @@
       </div>
       <div class="col-md-8">
         <!-- todo: replace profile name with login if profile = null  -->
-        <h4 class="text-center">Nicholas muturi</h4>
+        <h4 class="text-center" *ngIf="user.userName; else noUsername">{{user.userName}}</h4>
+        
         <p><span class="titles">Bio: </span>some random quote</p>
         <div class="row">
           <div class="col-md-6">
