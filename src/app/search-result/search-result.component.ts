@@ -21,6 +21,10 @@ export class SearchResultComponent implements OnInit {
   faEnvelopeOpen = faEnvelopeOpen;
   faUserFriends = faUserFriends;
 
+  goToUrl(){
+    window.location.href = this.user.userProfileURL;
+  }
+
   constructor(private route: ActivatedRoute, private userService: GitUserService) { }
 
   ngOnInit() {

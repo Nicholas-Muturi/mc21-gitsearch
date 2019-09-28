@@ -62,7 +62,6 @@ export class GitUserService {
     if(id == this.user.userLoginName){
       return this.user;
     }
-    
   }
 
   constructor(private http: HttpClient) {

@@ -7,6 +7,11 @@ h4, h6, p {
     text-align: center;
 }
 
+.profileName:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .titles{
     text-decoration: underline;
 }

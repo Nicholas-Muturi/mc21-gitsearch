@@ -7,7 +7,7 @@ export class ErrorHighlightDirective {
 
   constructor(private elem:ElementRef) { 
     this.elem.nativeElement.style.fontStyle='italic';
-    this.elem.nativeElement.style.color='#7DB3C6';
+    this.elem.nativeElement.style.color='#ff7c00';
 
   }
 

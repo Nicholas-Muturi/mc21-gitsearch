@@ -8,9 +8,9 @@
       </div>
       <div id="info_section" class="col-md-8">
 
-        <h4 *ngIf='user.userName; else noName'>{{user.userName}}</h4>
+        <h4 class="profileName" (click)='goToUrl()' *ngIf='user.userName; else noName'>{{user.userName}}</h4>
         <ng-template #noName>
-          <h4 appErrorHighlight>No username found</h4>
+          <h4 class="profileName" (click)='goToUrl()' appErrorHighlight >No username found</h4>
         </ng-template>
 
         <p *ngIf='user.userBio; else noBio'>{{user.userBio}}</p>
