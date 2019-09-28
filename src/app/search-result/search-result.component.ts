@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-search-result',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
-
+  user: User;
+  repo: Repo;
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

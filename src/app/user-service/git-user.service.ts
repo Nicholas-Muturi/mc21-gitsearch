@@ -18,6 +18,7 @@ export class GitUserService {
 
   profileSearch(){
     interface apiResponse {
+      id: number;
       login: string;
       name: string;
       html_url: string;
@@ -34,6 +35,7 @@ export class GitUserService {
 
     let userPromise = new Promise((resolve,reject)=>{
       this.http.get<apiResponse>(this.fullURL).toPromise().then(response =>{
+        this.user.userID = response.id;
         this.user.userLoginName = response.login;
         this.user.userName = response.name;
         this.user.userProfileURL = response.html_url;
@@ -54,6 +56,10 @@ export class GitUserService {
     });
 
     return userPromise;
+  }
+
+  getUser(){
+    return this.user.userID;
   }
 
   constructor(private http: HttpClient) {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GitUserService } from '../user-service/git-user.service';
 import { User } from '../user';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -28,12 +29,13 @@ export class HomeComponent implements OnInit {
     else {
       //if promise is resolved
       this.user = this.userService.user;
+      this.router.navigate(['/result',this.user.userID]);
     }
     this.userInput="";
     form.reset();
   }
 
-  constructor(private userService: GitUserService) {    
+  constructor(private userService: GitUserService, private router: Router) {    
   }
 
   ngOnInit() {
