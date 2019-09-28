@@ -1,44 +1,67 @@
-<ng-progress [color]="'red'"></ng-progress>
-<div id="userSection">
+<div id="userSection" class="container-fluid">
+  <ng-progress [color]="'red'"></ng-progress>
   <div class="card">
     <div class="row">
       <div class="col-md-4">
-        <img id="avatar" class="img-thumbnail" src="../../assets/img/avatar.jpeg" style="width: 250px; height: 250px;"
-          alt="avatar">
+        <img id="avatar" class="img-thumbnail" src="../../assets/img/avatar.jpeg" alt="avatar">
 
       </div>
-      <div class="col-md-8">
-        <!-- todo: replace profile name with login if profile = null  -->
-        <h4 class="text-center" *ngIf="user.userName; else noUsername">{{user.userName}}</h4>
-        
-        <p><span class="titles">Bio: </span>some random quote</p>
+      <div id="info_section" class="col-md-8">
+        <!-- ToDo: replace null values with custom messages  -->
+        <h4 *ngIf='user.userName; else noName'>{{user.userName}}</h4>
+        <ng-template #noName>
+          <h4>No username found</h4>
+        </ng-template>
+
+        <p *ngIf='user.userBio; else noBio'>{{user.userBio}}</p>
+        <ng-template #noBio>
+          <p>No Bio found</p>
+        </ng-template>
+
         <div class="row">
-          <div class="col-md-6">
-            <p><span class="titles">Location: </span>some random quote</p>
-          </div>
-          <div class="col-md-6">
-            <p><span class="titles">Email: </span>some random quote</p>
+          <div class="col-md-4">
+            <div *ngIf='user.userLocation;else noLocation'>
+              <h6 class="titles">Location</h6>
+              <p>{{user.userLocation}}</p>
+            </div>
+            <ng-template #noLocation>
+              <h6 class="titles">Location</h6>
+              <p>No location found</p>
+            </ng-template>
           </div>
 
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <p><span class="titles">Joined: </span>some random quote</p>
-          </div>
-          <div class="col-md-6">
-            <p><span class="titles">Repositories: </span>some random quote</p>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <p><span class="titles">Followers: </span>some random quote</p>
-          </div>
-          <div class="col-md-6">
-            <p><span class="titles">Following: </span>some random quote</p>
+          <div class="col-md-4">
+            <div *ngIf='user.userEmail;else noEmail'>
+              <h6 class="titles">Email</h6>
+              <p>{{user.userEmail}}</p>
+            </div>
+            <ng-template #noEmail>
+              <h6 class="titles">Email</h6>
+              <p>Email is hidden</p>
+            </ng-template>
           </div>
 
+          <div class="col-md-4">
+            <h6 class="titles">Joined</h6>
+            <p>{{user.userCreationDate|date}}</p>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h6 class="titles">Repositories</h6>
+            <p>{{user.userRepoCount}}</p>
+          </div>
+          <div class="col-md-4">
+            <h6 class="titles">Followers</h6>
+            <p>{{user.userFollowers}}</p>
+          </div>
+          <div class="col-md-4">
+            <h6 class="titles">Following</h6>
+            <p>{{user.userFollowing}}</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

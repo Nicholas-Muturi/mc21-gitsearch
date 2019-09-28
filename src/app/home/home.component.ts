@@ -29,8 +29,10 @@ export class HomeComponent implements OnInit {
     else {
       //if promise is resolved
       this.user = this.userService.user;
-      console.log(this.userService.user.userID)
-      this.router.navigate(['/result',this.userService.user.userID]);
+      setTimeout(()=>{
+        this.router.navigate(['/result',this.user.userLoginName]);
+      },1000)
+      
     }
     this.userInput="";
     form.reset();

@@ -13,40 +13,11 @@ export class SearchResultComponent implements OnInit {
   user: User;
   repo: Repo;
 
-  // replaceNull(){
-  //   if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-  //   else if(){
-
-  //   }
-
-  // }
-  
   constructor(private route: ActivatedRoute, private userService: GitUserService) { }
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
     this.user = this.userService.getUser(id);
-    this.replaceNull();
   }
 
 }

@@ -59,7 +59,7 @@ export class GitUserService {
   }
 
   getUser(id){
-    if(id == this.user.userID){
+    if(id == this.user.userLoginName){
       return this.user;
     }
     
