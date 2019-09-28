@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <form (ngSubmit)='searchUser()' #searchForm='ngForm'>
+  <form (ngSubmit)='searchUser(searchForm)' #searchForm='ngForm'>
     <div class="row">
       <div class="col-md-4"></div>
 
@@ -11,11 +11,11 @@
             <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
               #searchBar='ngModel' required>
           </div>
-          <!-- <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty); else validInput' class="alert alert-danger">
+          <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty); else validInput' class="alert alert-danger">
               <div *ngIf="searchBar.errors.required">Please insert a name</div>
-          </div> -->
+          </div>
         </div>
-        <button id="submitBtn" class="btn btn-outline-primary">Search User</button>
+        <button id="submitBtn" *ngIf='searchBar.valid' class="btn btn-outline-primary">Search User</button>
       </div>
 
       <div class="col-md-4"></div>

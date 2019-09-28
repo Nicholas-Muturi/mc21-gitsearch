@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitUserService } from '../user-service/git-user.service';
 import { User } from '../user';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
     return trimmedInput;
   }
 
-  searchUser(){
+  searchUser(form: NgForm){
     this.userService.generateURL(this.userInput);
     var result = this.userService.profileSearch();
     if(!result){
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
       this.user = this.userService.user;
     }
     this.userInput="";
+    form.reset();
   }
 
   constructor(private userService: GitUserService) {    
