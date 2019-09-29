@@ -8,6 +8,5 @@ h1, h2, h3, h4 , h5 ,h6{
 
 body {
     background: linear-gradient(90deg, rgba(234,250,254,1) 0%, rgba(255,255,255,1) 50%, rgba(234,250,254,1) 100%);
-
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
 }

@@ -9,9 +9,9 @@ h4, h6, p {
     text-align: center;
 }
 
-.profileName:hover {
-    cursor: pointer;
-    text-decoration: underline;
+a {
+    color: black;
+    font-family: 'Poppins', sans-serif;
 }
 
 .titles{
