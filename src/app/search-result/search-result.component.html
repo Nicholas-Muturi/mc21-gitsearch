@@ -72,12 +72,27 @@
 
       </div>
     </div>
-
     <hr>
 
-    <ul>
-      <li *ngFor = 'let repo of repos'>{{repo.name}}</li>
-    </ul>
+    <div id="repoSection">
+      <h1 class="titles">Repositories</h1>
+      <div id="repoDiv" *ngFor='let repo of repos; let i = index'>
+        <h4><a href="{{repo.gitURL}}">{{repo.name}}</a></h4> 
+        <p>{{repo.descr}}</p>
+        <div class="row">
+          <div class="col-md-4">
+            <p><span>Created On: </span>{{repo.creationDate|date}}</p>
+          </div>
+          <div class="col-md-4">
+              <p><span>Language: </span>{{repo.lang}}</p>
+          </div>
+          <div class="col-md-4">
+              <p><span>Live Site: </span>{{repo.homePage}}</p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div> <!-- End Repo Section-->
 
   </div>  <!-- End Card-->
 </div>

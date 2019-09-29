@@ -84,6 +84,7 @@ export class GitUserService {
           repo.gitURL = response[i].html_url;
           repo.descr = response[i].description;
           repo.creationDate = response[i].created_at;
+          repo.homePage = response[i].homepage;
           repo.lang = response[i].language; 
           this.allRepos.push(repo);  
         };
