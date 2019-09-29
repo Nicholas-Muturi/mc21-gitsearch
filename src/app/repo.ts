@@ -1,19 +1,21 @@
 export class Repo {
-    repoID: number;
-    repoName: string;
-    repoURL: string;
-    repoDescr: string;
-    repoCreationDate: string;
-    repoLang: string;
-    repoHomepage: string;
-
-    constructor(){
-        this.repoID=0;
-        this.repoName="";
-        this.repoURL="";
-        this.repoCreationDate="";
-        this.repoDescr="";
-        this.repoLang="";
-        this.repoHomepage="";
+        public ID: number;
+        public name: string;
+        public gitURL: string;
+        public descr: string;
+        public creationDate: string;
+        public homePage: string;
+        public lang: string
+    
+    constructor(
+        
+    ){
+        this.ID = 0;
+        this.name = "";
+        this.gitURL = "";
+        this.descr = "";
+        this.creationDate = "";
+        this.homePage = "";
+        this.lang = "";
     }
 }

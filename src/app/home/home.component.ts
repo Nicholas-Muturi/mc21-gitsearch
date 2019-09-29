@@ -25,10 +25,11 @@ export class HomeComponent implements OnInit {
     }
     else {
       this.userService.generateURL(this.userInput);
-      var result = this.userService.profileSearch();
-      if(!result){
+      var userResult = this.userService.profileSearch();
+      this.userService.repoSearch();
+      if(!userResult){
         //if promise is rejected
-        console.log("error")
+        alert("an error unexpected error occured");
       }
       else {
         //if promise is resolved

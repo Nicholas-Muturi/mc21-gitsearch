@@ -13,7 +13,7 @@ import { faMapMarkerAlt, faEnvelope, faCalendarCheck, faEnvelopeOpen, faUserFrie
 })
 export class SearchResultComponent implements OnInit {
   user: User;
-  repo: Repo;
+  repos: Repo[] = [];
 
   faMapMarkerAlt = faMapMarkerAlt;
   faEnvelope = faEnvelope;
@@ -30,6 +30,7 @@ export class SearchResultComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
     this.user = this.userService.getUser(id);
+    this.repos = this.userService.getRepos();
   }
 
 }
