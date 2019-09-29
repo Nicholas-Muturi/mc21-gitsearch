@@ -3,7 +3,7 @@ import { User } from '../user';
 import { Repo } from '../repo';
 import { ActivatedRoute } from '@angular/router';
 import { GitUserService } from '../user-service/git-user.service';
-import { faMapMarkerAlt, faEnvelope, faCalendarCheck, faEnvelopeOpen, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faEnvelope, faCalendarCheck, faEnvelopeOpen, faUserFriends, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -20,6 +20,7 @@ export class SearchResultComponent implements OnInit {
   faCalendarCheck = faCalendarCheck;
   faEnvelopeOpen = faEnvelopeOpen;
   faUserFriends = faUserFriends;
+  faCheckCircle = faCheckCircle;
 
   constructor(private route: ActivatedRoute, private userService: GitUserService) { }
 

@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faMapMarkerAlt"></fa-icon>Location
+              <fa-icon  [icon]="faMapMarkerAlt"></fa-icon>Location
             </h6>
             <p *ngIf='user.userLocation;else noLocation'>{{user.userLocation}}</p>
 
@@ -32,7 +32,7 @@
 
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faEnvelope"></fa-icon>Email
+              <fa-icon  [icon]="faEnvelope"></fa-icon>Email
             </h6>
             <p *ngIf='user.userEmail;else noEmail'>{{user.userEmail}}</p>
 
@@ -43,7 +43,7 @@
 
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faCalendarCheck"></fa-icon>Joined
+              <fa-icon  [icon]="faCalendarCheck"></fa-icon>Joined
             </h6>
             <p>{{user.userCreationDate|date}}</p>
           </div>
@@ -52,19 +52,19 @@
         <div class="row">
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faEnvelopeOpen"></fa-icon>Repositories
+              <fa-icon  [icon]="faEnvelopeOpen"></fa-icon>Repositories
             </h6>
             <p>{{user.userRepoCount}}</p>
           </div>
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faUserFriends"></fa-icon>Followers
+              <fa-icon  [icon]="faUserFriends"></fa-icon>Followers
             </h6>
             <p>{{user.userFollowers}}</p>
           </div>
           <div class="col-md-4">
             <h6 class="titles">
-              <fa-icon [icon]="faUserFriends"></fa-icon>Following
+              <fa-icon  [icon]="faUserFriends"></fa-icon>Following
             </h6>
             <p>{{user.userFollowing}}</p>
           </div>
@@ -72,22 +72,28 @@
 
       </div>
     </div>
-    <hr>
-
-    <div id="repoSection">
-      <h1 class="titles">Repositories</h1>
+    
+    <div id="repoSection" style="margin-top: 15px">
+        <h2 class="titles">Repositories</h2>
       <div id="repoDiv" *ngFor='let repo of repos; let i = index'>
         <h4><a href="{{repo.gitURL}}">{{repo.name}}</a></h4> 
         <p>{{repo.descr}}</p>
         <div class="row">
           <div class="col-md-4">
-            <p><span>Created On: </span>{{repo.creationDate|date}}</p>
+            <p><span><b>Created On:</b></span> {{repo.creationDate|date}}</p>
           </div>
           <div class="col-md-4">
-              <p><span>Language: </span>{{repo.lang}}</p>
+              <p><span><b>Language:</b></span> {{repo.lang}}</p>
           </div>
           <div class="col-md-4">
-              <p><span>Live Site: </span>{{repo.homePage}}</p>
+              <p *ngIf='repo.homePage; else noLink'>
+                <span><b>Live Site:</b></span> 
+                <a  href='{{repo.homePage}}'> Present<fa-icon id="hostedIcon" [icon]="faCheckCircle"></fa-icon></a>
+              </p>
+
+              <ng-template #noLink>
+                  <p><span><b>Live Site:</b></span> None</p>
+              </ng-template>
           </div>
         </div>
         <hr>

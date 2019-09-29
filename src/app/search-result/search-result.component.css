@@ -5,7 +5,7 @@
     padding-bottom: 20px;
 }
 
-h1, h4, h6, p {
+h1, h2, h4, h6, p {
     text-align: center;
 }
 
@@ -29,5 +29,14 @@ a {
 }
 
 fa-icon {
+    margin-left: 5px;
     margin-right: 5px;
+}
+
+#hostedIcon {
+    color: rgb(2, 142, 177);
+}
+
+#repoSection {
+    text-align: center;
 }
