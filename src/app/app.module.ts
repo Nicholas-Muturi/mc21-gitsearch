@@ -13,6 +13,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { ErrorHighlightDirective } from './error-highlight.directive';
 import { Error404Component } from './error404/error404.component';
 import { ActivatedRouteSnapshot } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const githubProfile = new InjectionToken('externalUrlRedirectResolver');
@@ -23,7 +24,8 @@ const githubProfile = new InjectionToken('externalUrlRedirectResolver');
     HomeComponent,
     SearchResultComponent,
     ErrorHighlightDirective,
-    Error404Component
+    Error404Component,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

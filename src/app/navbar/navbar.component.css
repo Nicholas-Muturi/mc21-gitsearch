@@ -1,0 +1,10 @@
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+nav {
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
