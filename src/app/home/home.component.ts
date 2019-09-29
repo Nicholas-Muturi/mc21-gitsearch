@@ -20,22 +20,27 @@ export class HomeComponent implements OnInit {
   }
 
   searchUser(form: NgForm){
-    this.userService.generateURL(this.userInput);
-    var result = this.userService.profileSearch();
-    if(!result){
-      //if promise is rejected
-      console.log("error")
+    if(this.userInput == ""){
+      alert("empty submissions are not allowed");
     }
     else {
-      //if promise is resolved
-      this.user = this.userService.user;
-      setTimeout(()=>{
-        this.router.navigate(['/result',this.user.userLoginName]);
-      },1000)
-      
-    }
-    this.userInput="";
-    form.reset();
+      this.userService.generateURL(this.userInput);
+      var result = this.userService.profileSearch();
+      if(!result){
+        //if promise is rejected
+        console.log("error")
+      }
+      else {
+        //if promise is resolved
+        this.user = this.userService.user;
+        setTimeout(()=>{
+          this.router.navigate(['/result',this.user.userLoginName]);
+        },1000)
+        
+      }
+      this.userInput="";
+      form.reset();
+      }  
   }
 
   constructor(private userService: GitUserService, private router: Router) {    
