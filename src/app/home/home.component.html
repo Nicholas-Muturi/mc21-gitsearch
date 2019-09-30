@@ -4,11 +4,11 @@
       <div class="col-md-4"></div>
 
       <div id="searchDiv" class="col-md-4">
-        <h1 class="text-center">Git search</h1>
+        <h1 class="text-center">Git Search</h1>
         <div class="form-group">
           <div class="wrapper">
             <img id='searchIcon' src="../../assets/img/search.png" alt="Search">
-            <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
+            <input id="searchBar" placeholder="e.g turi-byte" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
               #searchBar='ngModel' required>
           </div>
           <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty)' class="alert alert-danger">

@@ -1,5 +1,5 @@
 .container-fluid {
-    margin: 180px auto;
+    margin: 150px auto;
 }
 
 #searchDiv {
@@ -10,9 +10,9 @@
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 
 .wrapper {

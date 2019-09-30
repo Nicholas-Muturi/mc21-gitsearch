@@ -11,8 +11,8 @@ import { Repo } from '../repo';
 export class GitUserService {
 
   user = new User();
-  
   allRepos: Repo[] = [];
+  userName: string = "";
   fullURL: string;
   repoUrl: string;
 
