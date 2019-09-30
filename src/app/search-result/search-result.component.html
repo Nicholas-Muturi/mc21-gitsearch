@@ -79,13 +79,16 @@
         <h4><a href="{{repo.gitURL}}">{{repo.name}}</a></h4> 
         <p>{{repo.descr}}</p>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <p><span><b>Created On:</b></span> {{repo.creationDate|date}}</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
+            <p><span><b>Last Updated:</b></span> {{repo.updateDate|daysPassed}} ago</p>
+          </div>
+          <div class="col-md-3">
               <p><span><b>Language:</b></span> {{repo.lang}}</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
               <p *ngIf='repo.homePage; else noLink'>
                 <span><b>Live Site:</b></span> 
                 <a  href='{{repo.homePage}}'> Present<fa-icon id="hostedIcon" [icon]="faCheckCircle"></fa-icon></a>

@@ -4,6 +4,7 @@ export class Repo {
         public gitURL: string;
         public descr: string;
         public creationDate: string;
+        public updateDate: string;
         public homePage: string;
         public lang: string
     
@@ -15,6 +16,7 @@ export class Repo {
         this.gitURL = "";
         this.descr = "";
         this.creationDate = "";
+        this.updateDate = "";
         this.homePage = "";
         this.lang = "";
     }

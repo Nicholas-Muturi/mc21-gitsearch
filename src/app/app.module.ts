@@ -14,6 +14,7 @@ import { ErrorHighlightDirective } from './error-highlight.directive';
 import { ErrorComponent } from './error404/error404.component';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DaysPassedPipe } from './days-passed-pipe/DaysPassedPipe';
 
 
 const githubProfile = new InjectionToken('externalUrlRedirectResolver');
@@ -25,7 +26,8 @@ const githubProfile = new InjectionToken('externalUrlRedirectResolver');
     SearchResultComponent,
     ErrorHighlightDirective,
     ErrorComponent,
-    NavbarComponent
+    NavbarComponent,
+    DaysPassedPipe
   ],
   imports: [
     BrowserModule,
