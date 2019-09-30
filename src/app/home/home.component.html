@@ -11,7 +11,7 @@
             <input id="searchBar" [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
               #searchBar='ngModel' required>
           </div>
-          <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty); else validInput' class="alert alert-danger">
+          <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty)' class="alert alert-danger">
               <div *ngIf="searchBar.errors.required">Please insert a name</div>
           </div>
         </div>

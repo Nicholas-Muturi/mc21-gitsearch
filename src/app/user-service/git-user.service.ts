@@ -3,7 +3,6 @@ import { environment} from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
 import { Repo } from '../repo';
-import { of } from 'rxjs';
 
 
 @Injectable({
