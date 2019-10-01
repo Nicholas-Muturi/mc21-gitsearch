@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     }
     else {
       this.userService.generateURL(this.userInput);
+      this.userService.allRepos = []; //reset repos
       var userResult = this.userService.profileSearch();
       this.userService.repoSearch();
       if(!userResult){
