@@ -18,7 +18,7 @@ export class GitUserService {
 
   generateURL(searchedName: string){
     this.fullURL = (environment.apiUrl+"/users/"+searchedName+"?access_token="+environment.apiKey)
-    this.repoUrl = (environment.apiUrl+"/users/"+searchedName+"/repos");
+    this.repoUrl = (environment.apiUrl+"/users/"+searchedName+"/repos?access_token="+environment.apiKey);
   }
 
   profileSearch(){
